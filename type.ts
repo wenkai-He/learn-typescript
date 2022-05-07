@@ -32,3 +32,81 @@ printName({
     first:'He',
     last:'wenkai'
 })
+
+
+
+function printId(id:number|string){
+    console.log(id);
+    //缩小联合类型判断
+    if(typeof id==='string'){
+        console.log(id.toLowerCase());
+    }
+}
+printId('11')
+
+
+function getFirstThree(x:number[]|string){
+    return x.slice(0,3)
+}
+console.log(getFirstThree('3daedaeda'));
+console.log(getFirstThree([2,312,423,24,323]));
+
+
+
+type Point={
+    x:number
+    y:number
+}
+function printPoint(p:Point){
+    console.log(p.x);
+    console.log(p.y); 
+}
+
+printPoint({
+    x:200,
+    y:300
+})
+
+
+interface point{
+    x:number
+    y:number
+}
+
+function printpoint(pt:point){
+    console.log(pt.x);
+    console.log(pt.y);
+
+}
+
+printPoint({
+    x:200,
+    y:300
+})
+
+
+
+
+interface Animal{
+    name:string
+}
+interface Bear extends Animal{
+    honey:boolean
+}
+
+const bear:Bear={
+    name:'owen',
+    honey:true
+}
+
+
+interface person{
+    name:string
+}
+interface person{
+    age:number
+}
+const per:person={
+    name:'owen',
+    age:26
+}
