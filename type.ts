@@ -52,7 +52,7 @@ console.log(getFirstThree('3daedaeda'));
 console.log(getFirstThree([2,312,423,24,323]));
 
 
-
+//类型别名
 type Point={
     x:number
     y:number
@@ -67,7 +67,7 @@ printPoint({
     y:300
 })
 
-
+//接口
 interface point{
     x:number
     y:number
@@ -110,3 +110,15 @@ const per:person={
     name:'owen',
     age:26
 }
+
+
+enum Direction{
+    Up=1,
+    Down,
+    Left,
+    Right
+}
+console.log(Direction.Up);
+console.log(Direction.Down);
+
+
